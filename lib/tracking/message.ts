@@ -60,7 +60,8 @@ export function buildTrackedUrl(
     baseUrl ??
     (typeof window !== "undefined"
       ? window.location.origin
-      : process.env.NEXTAUTH_URL ?? "http://localhost:3000");
+      : process.env.NEXTAUTH_URL ?? "https://openreply-seven-mu.vercel.app"
+  
 
   const url = `${resolvedBaseUrl.replace(/\/$/, "")}/r/${slug}`;
   return recipientToken ? `${url}?r=${recipientToken}` : url;
